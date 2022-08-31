@@ -10,6 +10,7 @@ set(ENABLE_GLSLANG_BINARIES OFF)
 set(SHADERC_SKIP_TESTS ON)
 set(SPIRV_SKIP_EXECUTABLES ON)
 set(SPIRV_WERROR OFF)
+set(SHADERC_ENABLE_SHARED_CRT ON)
 
 add_subdirectory(spirv-headers)
 add_subdirectory(spirv-tools)
