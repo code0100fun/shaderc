@@ -20,6 +20,12 @@ pub fn (result &ShadercCompilationResult) error_message() string {
     return unsafe { error.vstring() }
 }
 
+pub fn (result &ShadercCompilationResult) bytes() []u8 {
+    bytes := C.shaderc_result_get_bytes(result)
+    length := C.shaderc_result_get_length(result)
+    return unsafe { bytes.vbytes(length) }
+}
+
 // Compile Options
 pub fn compile_options_initialize() ShadercCompileOptions {
     return C.shaderc_compile_options_initialize()

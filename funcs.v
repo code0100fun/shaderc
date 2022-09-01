@@ -17,6 +17,6 @@ fn C.shaderc_result_get_compilation_status(result &ShadercCompilationResult) Sha
 
 fn C.shaderc_result_get_error_message(result &ShadercCompilationResult) charptr
 
-fn C.shaderc_result_get_length(result &ShadercCompilationResult)
+fn C.shaderc_result_get_length(result &ShadercCompilationResult) Size_t
 
-fn C.shaderc_result_get_bytes(result &ShadercCompilationResult) charptr
+fn C.shaderc_result_get_bytes(result &ShadercCompilationResult) voidptr
