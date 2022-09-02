@@ -1,2 +1,4 @@
-thirdparty/build
+build
 *.dll
+*.exe
+*.a

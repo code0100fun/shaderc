@@ -1,6 +1,6 @@
 module shaderc
 
-#flag -L @VMODROOT/thirdparty/build/shaderc/libshaderc/
+#flag -L @VMODROOT/build/shaderc/libshaderc
 #flag -I @VMODROOT/thirdparty/shaderc/libshaderc/include
-#flag -llibshaderc_shared
+#flag -lshaderc_shared
 #include "shaderc/shaderc.h"

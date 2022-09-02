@@ -2,32 +2,25 @@
 
 V Bindings for Shaderc
 
+🚧 Work in progress 🚧
+
+## Clone
+
+```
+git clone --recursive https://github.com/code0100fun/shaderc.git \
+~/.vmodules/code0100fun/shaderc
+```
+
 ## Build
 
-Windows (Ninja):
 ```
-mkdir -p thirdparty/build
-cd thirdparty/build
-cmake ../
-ninja.exe
-```
-
-Windows (MSYS):
-```
-mkdir -p thirdparty/build
-cd thirdparty/build
-cmake -G "MSYS Makefiles" ../
+cd ~/.vmodules/code0100fun/shaderc
 make
 ```
 
 ## Running example
 
-After building, copy shared library to the same directory as the example:
-```
-cp thirdparty/build/shaderc/libshaderc/libshaderc_shared.dll examples/
-```
-
 Run the example:
 ```
-v run online_compile.v
+make run
 ```
