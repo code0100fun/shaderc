@@ -29,12 +29,12 @@
         "autoClearConsole": true,
         "commands": [
             {
-                "match": "\\.v",
-                "cmd": "./bin/fmt.sh '${relativeFile}'"
+                "match": "\\.v$",
+                "cmd": "v crun bin/fmts.v '${relativeFile}'"
             },
             {
-                "match": "\\.vsh",
-                "cmd": "./bin/fmt.sh '${relativeFile}'"
+                "match": "\\.vsh$",
+                "cmd": "v crun bin/fmts.v '${relativeFile}'"
             },
         ]
     }

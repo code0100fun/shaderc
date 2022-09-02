@@ -10,7 +10,6 @@ pub type Size_t = u64
 
 // Other platforms
 // pub type Size_t = u32
-
 pub fn to_size_t(n int) Size_t {
     return Size_t(u64(n))
 }
