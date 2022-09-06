@@ -1,13 +1,17 @@
 BUILD:=build
-LIB_OUTPUT=$(BUILD)/shaderc/libshaderc/libshaderc_shared.dll
+ifeq ($(OS),Windows_NT)
+	LIB_OUTPUT=$(BUILD)/shaderc/libshaderc/libshaderc_shared.dll
+else
+	LIB_OUTPUT=$(BUILD)/shaderc/libshaderc/libshaderc_combined.a
+endif
 
-all: $(BUILD_OUTPUT)
+all: $(LIB_OUTPUT)
 
 $(BUILD):
 	mkdir -p $(BUILD)
 
 $(LIB_OUTPUT): $(BUILD)
-	cd $(BUILD) ; cmake ../thirdparty ; cmake --build .
+	cd $(BUILD) ; cmake -GNinja ../thirdparty ; cmake --build .
 
 run: $(LIB_OUTPUT)
 	v run examples/online_compile.v
